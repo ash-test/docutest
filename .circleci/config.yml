@@ -15,15 +15,18 @@ jobs:
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/mongo:3.4.4
 
-    working_directory: ~/repo
+    working_directory: ~/test
 
     steps:
       - checkout
       - run: 
-        working_directory: ~/repo
+        name: config github 
         command: |
           git config --global user.email "ashleytqy@users.noreply.github.com"
           git config --global user.name "ashley teoh"
+      - run: 
+        name: deploy site
+        command: |
           echo "machine github.com login ashleytqy password $GITHUB_TOKEN" > ~/.netrc
           cd website && npm install && GIT_USER=ashleytqy npm run publish-gh-pages
 
