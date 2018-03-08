@@ -18,8 +18,8 @@ const users = [
 const siteConfig = {
   title: 'Test Site' /* title for your website */,
   tagline: 'A website for testing',
-  url: 'https://facebook.github.io' /* your website url */,
-  baseUrl: '/test-site/' /* base url for your project */,
+  url: 'https://ash-test.github.io' /* your website url */,
+  baseUrl: '/docutest/' /* base url for your project */,
   projectName: 'test-site',
   headerLinks: [
     {doc: 'doc1', label: 'Docs'},
