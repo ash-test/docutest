@@ -20,6 +20,7 @@ jobs:
     steps:
       - checkout
       - run: 
+        working_directory: ~/repo
         command: |
           git config --global user.email "ashleytqy@users.noreply.github.com"
           git config --global user.name "ashley teoh"
